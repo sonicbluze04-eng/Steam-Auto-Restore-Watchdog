@@ -1,0 +1,72 @@
+========================================================================
+   STEAM AUTO-RESTORE WATCHDOG v1.3 - USER MANUAL & TUTORIAL
+========================================================================
+
+Thank you for downloading the Steam Auto-Restore Watchdog! 
+
+This lightweight, automated tool runs silently inside your Windows System 
+Tray. It continuously maintains a local "Time Capsule" backup, tracks 
+your profile states, and automatically pushes missing achievements BACK 
+to Valve's live servers if a cloud sync glitch or network error ever 
+deletes them.
+
+------------------------------------------------------------------------
+🚀 SECTION 1: HOW TO START THE APPLICATION
+------------------------------------------------------------------------
+1. Make sure your official Steam Desktop client is running and logged in.
+2. Double-click 'steam_tool.exe'.
+3. The app runs as a hidden background utility, so NO windows will open.
+4. Look at the bottom-right corner of your desktop taskbar (by the clock).
+5. Click the small arrow (▲) to show your hidden tray icons.
+6. Look for the custom Blue Square Icon. Your watchdog is active!
+
+------------------------------------------------------------------------
+⚙️ SECTION 2: THE SYSTEM TRAY OPTIONS
+------------------------------------------------------------------------
+Right-click the Blue Square Icon to control your app:
+
+🔹 1. "Backup Right Now"
+   - Manually scans your local Steam files and updates your master save file 
+     named 'offline_achievements_backup.json' inside your Documents folder.
+   - Anti-Clutter Filter: If you haven't unlocked anything new, the app 
+     will notify you and skip creating identical copies to keep your system clean.
+
+🔹 2. "Configure Sync List..." (New in v1.3)
+   - Left-click this to pop open a sleek, dark-themed game checklist window.
+   - Here, you can check or uncheck individual games to choose exactly 
+     which profiles the software is allowed to backup and monitor.
+   - Click "Save Configurations" when you are done to apply your filters!
+
+🔹 3. "Enable Auto Mode" (Toggle Switch)
+   - Left-click this option to check or uncheck background automated loops.
+   - Checked (ON): The app wakes up every 10 minutes to scan for missing data.
+   - Unchecked (OFF): Background tasks pause completely.
+
+🔹 4. "Exit Tool"
+   - Shuts down the background monitoring process and removes the tray icon.
+
+------------------------------------------------------------------------
+🛡️ SECTION 3: HOW AUTOMATED RESTORATION WORKS
+------------------------------------------------------------------------
+This app is entirely self-healing! While Auto Mode is active:
+1. Every 10 minutes, the script compares your active local Steam directory 
+   against your trusted historical backup file inside your Documents folder.
+2. It completely bypasses any games you unchecked in the "Configure Sync List" UI.
+3. If it detects an enabled game profile missing any milestones that you previously 
+   earned, the tool hooks directly into your running local Steam Client engine.
+4. It initializes a Steamworks API socket bridge, sets the target Game App ID, 
+   and executes a direct "SetAchievement" sync command.
+5. This pushes the lost data back onto Valve's live databases automatically.
+6. Once completed, a native Windows Notification Banner will pop out from 
+   the edge of your screen informing you of the successful auto-restore!
+
+------------------------------------------------------------------------
+📂 SECTION 4: WHERE ARE MY FILES?
+------------------------------------------------------------------------
+The application keeps your system perfectly clean by containing all data 
+inside a dedicated workspace directory:
+📂 C:\Users\<YourUsername>\Documents\SteamWatchdog\
+
+- sync_config.json                 -> Saves your checked/unchecked UI game selections.
+- offline_achievements_backup.json  -> Your actual encrypted backup database.
+========================================================================

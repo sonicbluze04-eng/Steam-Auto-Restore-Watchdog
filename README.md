@@ -3,20 +3,6 @@
 Steam Auto-Restore Watchdog is a lightweight, zero-maintenance background utility that runs silently inside your Windows System Tray. It creates permanent, uncorruptible local achievement backups and uses the official **Steamworks API** to automatically force-unlock and heal your milestones on Valve's live servers if a cloud sync error or glitch ever erases them.
 
 
-## ☕ Support This Project
-
-My software is always **100% free, open-source, and built completely from scratch**. 
-
-If my tools or scripts helped you out, saved you time, or you just want to support a solo developer's hardware fund, you can drop a tip directly to my anonymous Bitcoin wallet. Every bit helps me get closer to upgrading my setup!
-
-💸 **Bitcoin (BTC) Address:**
-`bc1qlyt7pw3d0az09g7m9dyn8t6jc3j4crjclcx3fg`
-
-_Note: On-chain transactions can take 10–30 minutes to clear. Thank you so much for the support!_
-
-
----
-
 ## 🚀 Key Features
 
 * **🤖 100% Automated Self-Healing:** Continuously monitors your data. If achievements go missing from your account, the tool interfaces directly with your running Steam client to push them back to the live cloud servers completely hands-free.
